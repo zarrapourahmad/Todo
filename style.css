@@ -1,0 +1,121 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  box-sizing: border-box;
+  color: hsl(235, 19%, 35%);
+}
+.header {
+  height: 38vh;
+  background-image: url(img/bg-desktop-light.jpg);
+  background-size: cover;
+  background-position: top;
+}
+form {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -15%);
+}
+.todo-label {
+  display: block;
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 1.5rem;
+  padding-bottom: 2rem;
+  color: hsl(0, 0%, 98%);
+}
+.input-box {
+  border: 0;
+  width: 55rem;
+  height: 5.5rem;
+  padding-left: 2rem;
+  border-radius: 0.5rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+.input-box::placeholder {
+  color: hsl(233, 11%, 84%);
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.list-item-container {
+  display: flex;
+  margin-top: -2rem;
+  font-size: 1.6rem;
+  align-items: center;
+  flex-direction: column;
+}
+.list-item {
+  width: 55rem;
+  height: 5.5rem;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  padding-left: 2rem;
+  display: flex;
+  align-items: center;
+  background-color: hsl(0, 0%, 98%);
+  border-bottom: 0.1rem solid hsl(233, 11%, 84%);
+  box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.2);
+}
+.list-item:first-child {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+.list-item:last-child {
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+ul li::before {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  margin-right: 2rem;
+  background-size: cover;
+  background-position: center;
+  background-image: url(img/icons-circle.png);
+}
+span {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  right: 35%;
+  background-size: cover;
+  background-position: center;
+}
+
+.checked {
+  color: hsl(233, 11%, 84%);
+  text-decoration: line-through;
+}
+.checked::before {
+  width: 2.2rem;
+  height: 2.2rem;
+  background-image: url(img/icons-checked-circle.png);
+}
+
+@media screen and (max-width: 425px) {
+  /* .header {
+    background-image: url(img/bg-mobile-light.jpg);
+  } */
+  .input-box {
+    width: 30rem;
+  }
+  .list-item {
+    width: 30rem;
+  }
+  span {
+    right: 20%;
+  }
+}
